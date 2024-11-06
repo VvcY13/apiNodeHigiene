@@ -13,18 +13,36 @@ const Insumos = sequelize.define('Insumos',{
         allowNull: false,
     },
     tipo: {
-        type: DataTypes.ENUM('DIAMETRO', 'KILO'), 
+        type: DataTypes.ENUM('ROLLO', 'POLVO', 'CAJA'),
         allowNull: false,
     },
-    diametroStandar: {
-        type: DataTypes.DECIMAL(8, 2), 
-        allowNull: true, 
+    unidadMedida: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            isIn: [['metros', 'kilos', 'unidades']],
+        },
+    },
+    diametroInterno: {
+        type: DataTypes.DECIMAL(8, 2),
+        allowNull: true,
+    },
+    diametroExterno: {
+        type: DataTypes.DECIMAL(8, 2),
+        allowNull: true,
+    },
+    espesorTela: {
+        type: DataTypes.DECIMAL(8, 2),
+        allowNull: true,
     },
     pesoStandar: {
-        type: DataTypes.DECIMAL(8, 2), 
-        allowNull: true, 
+        type: DataTypes.DECIMAL(8, 2),
+        allowNull: true,
     },
-})
-
+    pesoPorBolsa: {
+        type: DataTypes.DECIMAL(8, 2), 
+        allowNull: true,
+    },
+});
 
 module.exports = Insumos;
