@@ -7,8 +7,7 @@ const sequelize = require('../config/configDatabase');
 // Registrar una nueva salida
 const createSalida = async (req, res) => {
     const { nroGuia, productos } = req.body;
-    console.log('Solicitud POST a /registrarproduccion recibida:', req.body);
-    console.log('Datos recibidos:', req.body); // Verificar los datos recibidos
+    
     // Validar nroGuia
     if (!nroGuia || !Array.isArray(productos) || productos.length === 0) {
         return res.status(400).json({ message: 'Datos de entrada inválidos' });

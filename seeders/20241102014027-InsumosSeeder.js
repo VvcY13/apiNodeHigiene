@@ -8,10 +8,10 @@ module.exports = {
         nombre: 'CELULOSA',
         tipo: 'ROLLO',
         unidadMedida: 'metros',
-        diametroInterno: 10.00,        // ejemplo de diámetro interno en cm
-        diametroExterno: 122.00,       // diámetro externo en cm
-        espesorTela: 0.2,              // espesor de la tela en cm
-        pesoStandar: 25.00,            // peso del rollo en kilos
+        diametroInterno: 10.00,        
+        diametroExterno: 122.00,      
+        espesorTela: 0.2,              
+        pesoStandar: 25.00,            
         createdAt: new Date(),
         updatedAt: new Date(),
       },

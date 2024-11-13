@@ -14,7 +14,7 @@ const SalidasDetalles = sequelize.define('SalidasDetalles', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: Salidas, // Aquí está la referencia correcta
+            model: Salidas, 
             key: 'id',
         },
     },
@@ -22,7 +22,7 @@ const SalidasDetalles = sequelize.define('SalidasDetalles', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: StockGeneral, // Aquí está la referencia correcta
+            model: StockGeneral, 
             key: 'id',
         },
     },
